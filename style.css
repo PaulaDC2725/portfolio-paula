@@ -1218,7 +1218,7 @@ h1, h2, h3, h4 {
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     border-top: 1px solid rgba(139, 92, 246, 0.2); /* Subtle gradient boundary */
-    padding: 0.25rem 1rem; /* Slimmer padding */
+    padding: 0.25rem 1rem; /* slimmer padding */
     display: none; /* hidden by default */
     justify-content: flex-start; /* Center-aligned now that text is removed */
     align-items: center;
