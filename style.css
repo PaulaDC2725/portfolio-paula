@@ -287,6 +287,7 @@ h1, h2, h3, h4 {
     color: var(--clr-txt-muted);
     margin-bottom: 2.5rem;
     max-width: 600px;
+    text-align: justify;
 }
 
 .hero-description strong {
@@ -378,6 +379,7 @@ h1, h2, h3, h4 {
     font-size: 1.05rem;
     color: var(--clr-txt-muted);
     margin-bottom: 1.5rem;
+    text-align: justify;
 }
 
 .stats-grid {
@@ -461,6 +463,7 @@ h1, h2, h3, h4 {
 .info-card p {
     font-size: 0.95rem;
     color: var(--clr-txt-muted);
+    text-align: justify;
 }
 
 /* --- Projects Section --- */
@@ -703,6 +706,7 @@ h1, h2, h3, h4 {
     color: var(--clr-txt-muted);
     margin-bottom: 1.5rem;
     flex-grow: 1;
+    text-align: justify;
 }
 
 .project-tags {
@@ -827,6 +831,7 @@ h1, h2, h3, h4 {
     color: var(--clr-txt-muted);
     margin-bottom: 2.5rem;
     font-size: 1.05rem;
+    text-align: justify;
 }
 
 .contact-methods {
@@ -1068,6 +1073,7 @@ h1, h2, h3, h4 {
     font-size: 0.95rem;
     color: var(--clr-txt-muted);
     margin-bottom: 1.5rem;
+    text-align: justify;
 }
 
 .timeline-tags {
@@ -1220,7 +1226,7 @@ h1, h2, h3, h4 {
     border-top: 1px solid rgba(139, 92, 246, 0.2); /* Subtle gradient boundary */
     padding: 0.25rem 1rem; /* slimmer padding */
     display: none; /* hidden by default */
-    justify-content: flex-start; /* Center-aligned now that text is removed */
+    justify-content: flex-start;
     align-items: center;
     transition: all 0.3s ease;
     width: 100%;
@@ -1251,7 +1257,7 @@ h1, h2, h3, h4 {
     transform: scale(1.15);
 }
 
-/* --- Google Translate Styling overrides --- */
+/* --- Native Google Translate Styles --- */
 #google_translate_element {
     display: inline-block;
 }
@@ -1267,9 +1273,9 @@ h1, h2, h3, h4 {
     color: var(--clr-txt) !important;
     border: 1px solid rgba(255, 255, 255, 0.15) !important;
     border-radius: 4px !important;
-    padding: 0.2rem 0.5rem !important; /* Slimmer padding */
+    padding: 0.2rem 0.5rem !important;
     font-family: var(--font-title) !important;
-    font-size: 0.75rem !important; /* Smaller text */
+    font-size: 0.75rem !important;
     font-weight: 500 !important;
     outline: none !important;
     cursor: pointer !important;

@@ -2,6 +2,15 @@
    INTERACTIVE LOGIC - PORTFOLIO (PAULA DELGADO)
    ========================================================================== */
 
+// --- Google Translate Initialization Callback (Global Scope - Defined Early) ---
+window.googleTranslateElementInit = function() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+    }, 'google_translate_element');
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     
     // --- Elements ---
@@ -319,11 +328,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Google Translate Language Change Banner Listener ---
     const initTranslateListener = () => {
-        // Close banner and show floating trigger button event listener
         const closeBtn = document.getElementById('lang-banner-close');
         const bannerEl = document.getElementById('lang-banner');
         const triggerBtn = document.getElementById('lang-banner-trigger');
         
+        // Show/hide Banner toggle logic
         if (closeBtn && bannerEl && triggerBtn) {
             closeBtn.addEventListener('click', () => {
                 bannerEl.style.display = 'none';
@@ -339,12 +348,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initTranslateListener();
 });
-
-// --- Google Translate Initialization Callback (Global Scope) ---
-window.googleTranslateElementInit = function() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-    }, 'google_translate_element');
-};
