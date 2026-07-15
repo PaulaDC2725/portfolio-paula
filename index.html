@@ -4,45 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portafolio profesional de Paula Catalina Delgado Almendrales, Ingeniera de Software Full Stack y Frontend Developer. Especialista en interfaces de ultra-alto rendimiento y arquitecturas limpias.">
-    <meta name="keywords" content="Paula Catalina Delgado Almendrales, Paula Delgado, Ingeniera de Software, Full Stack, Frontend Developer, React, Next.js, .NET 8, C#, Node.js, Bogotá, Colombia, Portafolio">
+    <meta name="keywords" content="Paula Catalina Delgado Almendrales, Paula Delgado, Software Engineer, Full Stack, Frontend Developer, React, Next.js, .NET 8, C#, Node.js, Bogota, Colombia, Portfolio">
     <meta name="author" content="Paula Catalina Delgado Almendrales">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Paula Delgado | Software Engineer">
-    <meta property="og:description" content="Portafolio profesional de Paula Catalina Delgado Almendrales. Especialista en interfaces de alto rendimiento y desarrollo Full Stack (.NET / Node.js).">
+    <meta property="og:description" content="Professional portfolio of Paula Catalina Delgado Almendrales. Specialist in high-performance interfaces and Full Stack development (.NET / Node.js).">
     <meta property="og:image" content="assets/profile_photo.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Paula Delgado | Software Engineer">
-    <meta property="twitter:description" content="Portafolio profesional de Paula Catalina Delgado Almendrales. Especialista en interfaces de alto rendimiento y desarrollo Full Stack (.NET / Node.js).">
+    <meta property="twitter:description" content="Professional portfolio of Paula Catalina Delgado Almendrales. Specialist in high-performance interfaces and Full Stack development (.NET / Node.js).">
     <meta property="twitter:image" content="assets/profile_photo.jpg">
 
     <title>Paula Delgado | Software Engineer</title>
-
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Header / Navbar -->
+    <!-- Header & Navbar -->
     <header class="header">
+        <!-- Language Switcher Banner -->
+        <div class="lang-banner notranslate" id="lang-banner">
+            <span id="lang-banner-text">Don't understand English? Translate the page to your language of choice:</span>
+            <div id="google_translate_element"></div>
+        </div>
+        
         <div class="container navbar">
-            <a href="#" class="logo" id="logo">PD<span>.</span></a>
+            <a href="#" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Paula Delgado</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
             
             <nav class="nav-menu" id="nav-menu">
-                <a href="#inicio" class="nav-link active">Inicio</a>
-                <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
-                <a href="#experiencia" class="nav-link">Experiencia</a>
-                <a href="#proyectos" class="nav-link">Proyectos</a>
-                <a href="#habilidades" class="nav-link">Habilidades</a>
-                <a href="#contacto" class="nav-link">Contacto</a>
+                <a href="#inicio" class="nav-link active" data-i18n="nav-home">Home</a>
+                <a href="#sobre-mi" class="nav-link" data-i18n="nav-about">About Me</a>
+                <a href="#experiencia" class="nav-link" data-i18n="nav-experience">Experience</a>
+                <a href="#proyectos" class="nav-link" data-i18n="nav-projects">Projects</a>
+                <a href="#habilidades" class="nav-link" data-i18n="nav-skills">Skills</a>
+                <a href="#contacto" class="nav-link" data-i18n="nav-contact">Contact</a>
             </nav>
 
             <div class="nav-toggle" id="nav-toggle">
@@ -59,15 +68,15 @@
             <div class="hero-bg-glow"></div>
             <div class="container hero-grid">
                 <div class="hero-content">
-                    <div class="badge">Disponible de Inmediato | Remoto & Híbrido Bogotá</div>
-                    <h1 class="hero-title">
-                        Ingeniería de Software: Interfaces de <span class="text-gradient">Ultra Rendimiento</span> y Sistemas Escalables
+                    <div class="badge" data-i18n="hero-badge">Available Immediately | Remote & Hybrid Bogotá</div>
+                    <h1 class="hero-title" data-i18n="hero-title">
+                        Software Engineering: <span class="text-gradient">Ultra-Performance</span> Interfaces & Scalable Systems
                     </h1>
-                    <p class="hero-description">
-                     Ingeniera de Sistemas y Desarrolladora Full Stack con más de 3 años de experiencia formal en el ecosistema JavaScript/TypeScript. Especializada en el diseño y arquitectura de aplicaciones escalables, combinando un Frontend de ultra-alto rendimiento (React.js, Next.js, Angular, Vite) con un Backend robusto y desacoplado (.NET 8, Node.js, Python). Experiencia comprobada en entornos internacionales remotos, implementación de Arquitectura Hexagonal y Domain-Driven Design (DDD), y automatización CI/CD.  
+                    <p class="hero-description" data-i18n="hero-desc">
+                        Systems Engineer and Full Stack Developer with over 3 years of formal experience in the JavaScript/TypeScript ecosystem. Specialized in the design and architecture of scalable applications, combining ultra-performance Frontend (React.js, Next.js, Angular, Vite) with a robust and decoupled Backend (.NET 8, Node.js, Python). Proven experience in remote international environments, implementation of Hexagonal Architecture and Domain-Driven Design (DDD), and CI/CD automation.
                     </p>
                     <div class="hero-actions">
-                        <a href="#proyectos" class="btn btn-primary">Projects</a>
+                        <a href="#proyectos" class="btn btn-primary" data-i18n="nav-projects">Projects</a>
                         <a href="assets/Hoja de vida Paula Delgado.pdf" download target="_blank" rel="noopener noreferrer" class="btn btn-secondary flex-center" aria-label="Descargar CV en Español">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                             CV (ES)
@@ -78,7 +87,7 @@
                         </a>
                     </div>
                     <div class="hero-socials" style="margin-top: 1.5rem; display: flex; gap: 1rem; align-items: center;">
-                        <span style="font-family: var(--font-code); font-size: 0.8rem; color: var(--clr-txt-muted);">Conéctate:</span>
+                        <span style="font-family: var(--font-code); font-size: 0.8rem; color: var(--clr-txt-muted);" data-i18n="hero-connect">Connect:</span>
                         <a href="https://github.com/PaulaDC2725" target="_blank" aria-label="GitHub" class="social-link flex-center" style="width: 2.5rem; height: 2.5rem; border-radius: 8px;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                         </a>
@@ -89,7 +98,7 @@
                 </div>
                 <div class="hero-visual">
                     <div class="image-wrapper">
-                        <img src="assets/profile_photo.jpg" alt="Foto de perfil de Paula Delgado" class="hero-img">
+                        <img src="assets/profile_photo.jpg" alt="Paula Delgado Profile Photo" class="hero-img">
                         <div class="image-glow"></div>
                     </div>
                 </div>
@@ -100,32 +109,32 @@
         <section id="sobre-mi" class="about-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-subtitle">¿Quién soy?</span>
-                    <h2 class="section-title">Sobre Mí</h2>
+                    <span class="section-subtitle" data-i18n="about-subtitle">Who am I?</span>
+                    <h2 class="section-title" data-i18n="about-title">About Me</h2>
                     <div class="divider"></div>
                 </div>
 
                 <div class="about-grid">
                     <div class="about-text">
-                        <p>
-                            Con una sólida trayectoria técnica iniciada en 2019, he consolidado un perfil <strong>"T-Shaped"</strong> que equilibra una especialización profunda en desarrollo Frontend de ultra-alto rendimiento bajo el ecosistema de JavaScript/TypeScript, con un sólido dominio en backends modernos (.NET 8, Node.js). Mi formación incluye el reconocimiento a la Excelencia Académica y el Premio al Mejor Proyecto de Software por el SENA, respaldada por la culminación exitosa del 100% de la carga académica de la Ingeniería de Sistemas en la Universidad EAN, capacitándome para resolver problemas complejos de negocio con soluciones escalables listas para producción.
+                        <p data-i18n="about-p1">
+                            With a solid technical trajectory started in 2019, I have consolidated a "T-Shaped" profile that balances deep specialization in ultra-performance Frontend development under the JavaScript/TypeScript ecosystem with solid mastery in modern backends (.NET 8, Node.js). My background includes recognition for Academic Excellence and the Best Software Project Award by SENA, backed by the successful completion of 100% of the Systems Engineering coursework at Universidad EAN, enabling me to solve complex business problems with production-ready scalable solutions.
                         </p>
-                        <p>
-                            Como defensora del Clean Code y de los principios SOLID, estructuro arquitecturas de software aplicando <strong>Domain-Driven Design (DDD) y Arquitectura Hexagonal</strong> para asegurar el desacople completo de la lógica de negocio y un mantenimiento sostenible a largo plazo. Mi experiencia en el desarrollo de la plataforma B2B Drill BI Optimization para Enovate me permitió liderar la optimización del ciclo de vida de componentes frontend y eliminar fugas de memoria (<em>zero memory leaks</em>), además de acelerar la Experiencia del Desarrollador (DX) migrando pipelines y compilaciones a Vite y pnpm. Mi nivel de <strong>inglés A2/B1 técnico</strong> me capacita para estructurar contratos de datos y sustentar decisiones arquitectónicas con stakeholders e ingenieros globales sin fricciones.
+                        <p data-i18n="about-p2">
+                            As an advocate for Clean Code and SOLID principles, I structure software architectures applying Domain-Driven Design (DDD) and Hexagonal Architecture to ensure the complete decoupling of business logic and long-term sustainable maintenance. My experience developing the B2B platform Drill BI Optimization for Enovate allowed me to lead the optimization of frontend component lifecycles and eliminate memory leaks (zero memory leaks), in addition to accelerating Developer Experience (DX) by migrating pipelines and local builds to Vite and pnpm. My A2/B1 technical English level enables me to structure data contracts and support architectural decisions with global stakeholders and engineers without friction.
                         </p>
                         
                         <div class="stats-grid">
                             <div class="stat-card">
-                                <span class="stat-number">7+</span>
-                                <span class="stat-label">Años Exp. Formal</span>
+                                <span class="stat-number">3+</span>
+                                <span class="stat-label" data-i18n="stat-label-exp">Years Formal Exp.</span>
                             </div>
                             <div class="stat-card">
                                 <span class="stat-number">3+</span>
-                                <span class="stat-label">Años Exp. Remota</span>
+                                <span class="stat-label" data-i18n="stat-label-remote">Years Remote Exp.</span>
                             </div>
                             <div class="stat-card">
                                 <span class="stat-number">A2/B1</span>
-                                <span class="stat-label">Inglés Técnico</span>
+                                <span class="stat-label" data-i18n="stat-label-eng">Technical English</span>
                             </div>
                         </div>
                     </div>
@@ -135,15 +144,15 @@
                             <div class="info-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
                             </div>
-                            <h3>Desarrollo Frontend & DX</h3>
-                            <p>Creación de vistas fluidas de alta frecuencia y migración a empaquetadores modernos (Vite/pnpm) para una DX optimizada.</p>
+                            <h3 data-i18n="about-card1-title">Frontend Development & DX</h3>
+                            <p data-i18n="about-card1-desc">Creation of high-frequency fluid views and migration to modern bundlers (Vite/pnpm) for optimized DX.</p>
                         </div>
                         <div class="info-card">
                             <div class="info-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
                             </div>
-                            <h3>Backend & Arquitectura</h3>
-                            <p>Implementación de APIs corporativas en .NET 8 y Node.js, bajo enfoques DDD, Arquitectura Hexagonal y patrones desacoplados.</p>
+                            <h3 data-i18n="about-card2-title">Backend & Architecture</h3>
+                            <p data-i18n="about-card2-desc">Implementation of corporate APIs in .NET 8 and Node.js, under DDD, Hexagonal Architecture, and decoupled patterns.</p>
                         </div>
                     </div>
                 </div>
@@ -154,8 +163,8 @@
         <section id="experiencia" class="experience-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-subtitle">Mi trayectoria</span>
-                    <h2 class="section-title">Experiencia Profesional</h2>
+                    <span class="section-subtitle" data-i18n="exp-subtitle">My trajectory</span>
+                    <h2 class="section-title" data-i18n="exp-title">Professional Experience</h2>
                     <div class="divider"></div>
                 </div>
 
@@ -163,11 +172,11 @@
                     <!-- Experience 1 -->
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
-                        <div class="timeline-date">Mayo 2023 – Mayo 2026</div>
+                        <div class="timeline-date">May 2023 – May 2026</div>
                         <div class="timeline-content">
                             <h3>Software Engineer - Frontend Developer</h3>
-                            <span class="timeline-company">ENOVATE | Contratación Internacional (Remoto B2B)</span>
-                            <p>Lideré la ingeniería frontend desde cero para Drill BI Optimization (plataforma B2B de monitoreo de pozos petroleros). Conecté APIs REST dinámicas de alta frecuencia en Node.js para ingesta en tiempo real, optimizando el ciclo de vida de componentes React para renderizar miles de puntos por segundo sin fugas de memoria (cero memory leaks). Modernicé la Experiencia del Desarrollador (DX) implementando Vite y pnpm, reduciendo en un 50% los tiempos de compilación local y optimizando el procesamiento en pipelines de integración y despliegue continuo (CI/CD).</p>
+                            <span class="timeline-company" data-i18n="exp1-company">ENOVATE | International Contracting (B2B Remote)</span>
+                            <p data-i18n="exp1-desc">I led the frontend engineering from scratch for Drill BI Optimization (B2B oil well real-time monitoring platform). I connected high-frequency Node.js dynamic REST APIs for real-time ingestion, optimizing React component lifecycle to render thousands of data points per second without memory leaks. I modernized Developer Experience (DX) by implementing Vite and pnpm, reducing local build times by 50% and optimizing integration and deployment (CI/CD) pipelines.</p>
                             <div class="timeline-tags">
                                 <span>React.js v18</span>
                                 <span>JavaScript</span>
@@ -182,11 +191,11 @@
                     <!-- Experience 2 -->
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
-                        <div class="timeline-date">Febrero 2026 – Mayo 2026</div>
+                        <div class="timeline-date">Feb 2026 – May 2026</div>
                         <div class="timeline-content">
                             <h3>Software Designer & Frontend Developer</h3>
-                            <span class="timeline-company">UNIVERSIDAD EAN (Proyecto Académico Aplicado)</span>
-                            <p>Lideré el ciclo de vida completo de desarrollo (SDLC) de un sistema modular corporativo de Recursos Humanos (RRHH). Encabecé la redacción de la especificación de requerimientos de software (SRS), el modelado de bases de datos relacionales, el diseño de la interfaz y experiencia de usuario (UI/UX) en Figma y el desarrollo final del Frontend.</p>
+                            <span class="timeline-company" data-i18n="exp2-company">UNIVERSIDAD EAN (Applied Academic Project)</span>
+                            <p data-i18n="exp2-desc">I led the complete software development life cycle (SDLC) for a corporate modular Human Resources (HR) system. I headed the writing of the software requirements specification (SRS), relational database modeling, user interface and experience (UI/UX) design in Figma, and the final Frontend development.</p>
                             <div class="timeline-tags">
                                 <span>Figma</span>
                                 <span>Frontend</span>
@@ -200,11 +209,11 @@
                     <!-- Experience 3 -->
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
-                        <div class="timeline-date">Agosto 2022 – Abril 2023</div>
+                        <div class="timeline-date">Aug 2022 – Apr 2023</div>
                         <div class="timeline-content">
                             <h3>Junior Web Developer</h3>
-                            <span class="timeline-company">ANNAR HEALTH TECHNOLOGIES | Bogotá, Colombia</span>
-                            <p>Desarrollé y mantuve el ecosistema web del área de IT Health Projects con Angular y Angular Material (TypeScript). Traduje requerimientos complejos de negocio del sector salud en interfaces funcionales e intuitivas, mejorando la adopción del producto de software de laboratorio en un 20% y asegurando integraciones robustas de contratos de datos.</p>
+                            <span class="timeline-company" data-i18n="exp3-company">ANNAR HEALTH TECHNOLOGIES | Bogotá, Colombia</span>
+                            <p data-i18n="exp3-desc">I developed and maintained the web ecosystem for the IT Health Projects area using Angular and Angular Material (TypeScript). I translated complex business requirements from the healthcare sector into functional and intuitive interfaces, improving software adoption for laboratory products by 20% and ensuring robust data contract integrations.</p>
                             <div class="timeline-tags">
                                 <span>Angular</span>
                                 <span>Angular Material</span>
@@ -223,8 +232,8 @@
         <section id="proyectos" class="projects-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-subtitle">Mis trabajos recientes</span>
-                    <h2 class="section-title">Proyectos</h2>
+                    <span class="section-subtitle" data-i18n="projects-subtitle">My recent works</span>
+                    <h2 class="section-title" data-i18n="projects-title">Projects</h2>
                     <div class="divider"></div>
                 </div>
 
@@ -241,23 +250,23 @@
                                     <div class="project-overlay private-code">
                                         <div class="private-status">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 4px; color: var(--clr-secondary);"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                                            <span>Código Propietario</span>
+                                            <span data-i18n="proj-lock">Proprietary Code</span>
                                         </div>
                                     </div>
                                     <div class="project-placeholder flex-center">
                                         <div class="project-placeholder-text">Drill BI Optimization</div>
-                                        <span class="project-category-tag">Proyecto Corporativo @ Enovate</span>
+                                        <span class="project-category-tag" data-i18n="proj1-tag">Corporate Project @ Enovate</span>
                                     </div>
                                 </div>
                                 <div class="project-info">
                                     <h3>Drill BI Optimization</h3>
-                                    <p><strong>Problema y Solución:</strong> Como parte de la plataforma B2B de Enovate para telemetría petrolera en tiempo real, el rendimiento frontend colapsaba con el flujo masivo de datos. Diseñé una arquitectura reactiva optimizada en React 18 que renderiza actualizaciones de alta frecuencia sin fugas de memoria.</p>
-                                    <p class="project-arch-text" style="font-size: 0.82rem; color: var(--clr-txt-muted); margin-bottom: 1rem;">
-                                        <em>Impacto Técnico:</em> Cero memory leaks, renderizado optimizado en React 18 y builds rápidos con Vite/pnpm.
+                                    <p data-i18n="proj1-desc"><strong>Problem & Solution:</strong> As part of Enovate's B2B real-time oil telemetry platform, frontend performance collapsed under massive data streams. I designed a reactive architecture optimized in React 18 that renders high-frequency updates with zero memory leaks.</p>
+                                    <p class="project-arch-text" style="font-size: 0.82rem; color: var(--clr-txt-muted); margin-bottom: 1rem;" data-i18n="proj1-impact">
+                                        <em>Technical Impact:</em> Zero memory leaks, optimized React 18 rendering, and fast builds with Vite/pnpm.
                                     </p>
                                     <div class="project-tags">
                                         <span>React.js</span>
-                                        <span>JavaScript</span>
+                                        <span>TypeScript</span>
                                         <span>Node.js REST</span>
                                         <span>Tailwind</span>
                                         <span>pnpm</span>
@@ -269,23 +278,23 @@
                             <article class="project-card">
                                 <div class="project-img-container">
                                     <div class="project-overlay">
-                                        <a href="https://monolegal-cobranzas.vercel.app/" target="_blank" aria-label="Ver Demo" class="project-link-btn">
+                                        <a href="https://github.com/PaulaDC2725" target="_blank" aria-label="Ver Demo" class="project-link-btn">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                                         </a>
-                                        <a href="https://github.com/PaulaDC2725/monolegal-arquitectura-reto" target="_blank" aria-label="Ver Código en GitHub" class="project-link-btn">
+                                        <a href="https://github.com/PaulaDC2725" target="_blank" aria-label="Ver Código en GitHub" class="project-link-btn">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                                         </a>
                                     </div>
                                     <div class="project-placeholder flex-center">
                                         <div class="project-placeholder-text">Automatización Judicial</div>
-                                        <span class="project-category-tag">Proyecto Personal (Desplegado)</span>
+                                        <span class="project-category-tag" data-i18n="proj2-tag">Personal Project (Deployed)</span>
                                     </div>
                                 </div>
                                 <div class="project-info">
                                     <h3>Motor de Estados Procesales</h3>
-                                    <p><strong>Problema y Solución:</strong> El procesamiento manual de notificaciones judiciales en bufetes legales es ineficiente y propenso a errores. Construí y desplegué un motor asíncrono que automatiza la ingesta y alertas instantáneas de novedades judiciales.</p>
-                                    <p class="project-arch-text" style="font-size: 0.82rem; color: var(--clr-txt-muted); margin-bottom: 1rem;">
-                                        <em>Impacto Técnico:</em> Arquitectura Hexagonal, DDD, 100% test coverage con xUnit/Moq y despliegue automatizado.
+                                    <p data-i18n="proj2-desc"><strong>Problem & Solution:</strong> Manual processing of judicial notifications in law firms is inefficient and error-prone. I built and deployed an asynchronous engine that automates the ingestion and instant alerts of judicial updates.</p>
+                                    <p class="project-arch-text" style="font-size: 0.82rem; color: var(--clr-txt-muted); margin-bottom: 1rem;" data-i18n="proj2-impact">
+                                        <em>Technical Impact:</em> Hexagonal Architecture, DDD, 100% test coverage with xUnit/Moq, and automated deployment.
                                     </p>
                                     <div class="project-tags">
                                         <span>.NET 8 (C#)</span>
@@ -297,7 +306,7 @@
                                 </div>
                             </article>
 
-                            <!-- Project 3: OurChatbot -->
+                            <!-- Project 3: OurChatBot -->
                             <article class="project-card">
                                 <div class="project-img-container">
                                     <div class="project-overlay">
@@ -306,15 +315,15 @@
                                         </a>
                                     </div>
                                     <div class="project-placeholder flex-center">
-                                        <div class="project-placeholder-text">OurChatbot</div>
-                                        <span class="project-category-tag">Proyecto de Grado @ U. EAN (Grupal)</span>
+                                        <div class="project-placeholder-text">OurChatBot</div>
+                                        <span class="project-category-tag" data-i18n="proj3-tag">Graduation Project @ U. EAN (Group)</span>
                                     </div>
                                 </div>
                                 <div class="project-info">
-                                    <h3>OurChatbot</h3>
-                                    <p><strong>Orientador Profesional IA:</strong> Aplicación web impulsada por Inteligencia Artificial diseñada para orientar a estudiantes y futuros profesionales sobre el impacto de la IA en sus carreras. Cuenta con autenticación de usuarios, persistencia de sesiones de chat y un bot conversacional integrado con la API de Groq.</p>
-                                    <p class="project-arch-text" style="font-size: 0.82rem; color: var(--clr-txt-muted); margin-bottom: 1rem;">
-                                        <em>Impacto Técnico:</em> Renderizado del lado del servidor (SSR), arquitectura cliente-servidor robusta y almacenamiento local persistente de conversaciones.
+                                    <h3>OurChatBot</h3>
+                                    <p data-i18n="proj3-desc"><strong>Orientador Profesional IA:</strong> AI Career Guide: Web application powered by Artificial Intelligence designed to guide students and future professionals on the impact of AI in their careers. It features user authentication, chat session persistence, and a conversational bot integrated with the Groq API.</p>
+                                    <p class="project-arch-text" style="font-size: 0.82rem; color: var(--clr-txt-muted); margin-bottom: 1rem;" data-i18n="proj3-impact">
+                                        <em>Technical Impact:</em> Server-Side Rendering (SSR), robust client-server architecture, and persistent local storage of conversations.
                                     </p>
                                     <div class="project-tags">
                                         <span>Angular (SSR)</span>
@@ -330,23 +339,20 @@
                             <article class="project-card">
                                 <div class="project-img-container">
                                     <div class="project-overlay">
-                                        <a href="https://enotime-app.vercel.app/" target="_blank" aria-label="Ver Demo" class="project-link-btn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                                        </a>
-                                        <a href="https://github.com/PaulaDC2725/EnoTime-app" target="_blank" aria-label="Ver Código en GitHub" class="project-link-btn" style="width: 3.5rem; height: 3.5rem;">
+                                        <a href="https://github.com/PaulaDC2725" target="_blank" aria-label="Ver Código en GitHub" class="project-link-btn" style="width: 3.5rem; height: 3.5rem;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                                         </a>
                                     </div>
                                     <div class="project-placeholder flex-center">
-                                        <div class="project-placeholder-text">EnoTime</div>
-                                        <span class="project-category-tag">Proyecto de Prácticas (Desplegado - Individual)</span>
+                                        <div class="project-placeholder-text">enoTime</div>
+                                        <span class="project-category-tag" data-i18n="proj4-tag">Practice Project (Deployed - Individual)</span>
                                     </div>
                                 </div>
                                 <div class="project-info">
-                                    <h3>EnoTime</h3>
-                                    <p><strong>Problema y Solución:</strong> Diseñado y maquetado 100% en solitario (desde documentación, diagramas, mockups y responsive) en Enovate. Posteriormente, de forma individual, integré la base de datos relacional y el backend de control de horas para su despliegue definitivo.</p>
-                                    <p class="project-arch-text" style="font-size: 0.82rem; color: var(--clr-txt-muted); margin-bottom: 1rem;">
-                                        <em>Impacto Técnico:</em> Optimización de queries concurrentes, dashboards analíticos dinámicos y 100% de cobertura de pruebas en el flujo de aprobación.
+                                    <h3>enoTime</h3>
+                                    <p data-i18n="proj4-desc"><strong>Problem & Solution:</strong> Designed and prototyped 100% individually (from documentation, diagrams, mockups, and responsive frontend) at Enovate. Later, I individually integrated the relational database and the backend for timesheet tracking to its final deployment.</p>
+                                    <p class="project-arch-text" style="font-size: 0.82rem; color: var(--clr-txt-muted); margin-bottom: 1rem;" data-i18n="proj4-impact">
+                                        <em>Technical Impact:</em> Optimization of concurrent queries, dynamic analytical dashboards, and 100% test coverage in the approval workflow.
                                     </p>
                                     <div class="project-tags">
                                         <span>React.js</span>
@@ -362,20 +368,20 @@
                             <article class="project-card">
                                 <div class="project-img-container">
                                     <div class="project-overlay">
-                                        <a href="https://github.com/PaulaDC2725/TrainGym" target="_blank" aria-label="Ver Código en GitHub" class="project-link-btn" style="width: 3.5rem; height: 3.5rem;">
+                                        <a href="https://github.com/PaulaDC2725" target="_blank" aria-label="Ver Código en GitHub" class="project-link-btn" style="width: 3.5rem; height: 3.5rem;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                                         </a>
                                     </div>
                                     <div class="project-placeholder flex-center">
                                         <div class="project-placeholder-text">TrainGym</div>
-                                        <span class="project-category-tag">Proyecto de Grado @ SENA (Tecnólogo - Grupal)</span>
+                                        <span class="project-category-tag" data-i18n="proj5-tag">Graduation Project @ SENA (Technologist - Group)</span>
                                     </div>
                                 </div>
                                 <div class="project-info">
                                     <h3>TrainGym</h3>
-                                    <p><strong>Problema y Solución:</strong> Proyecto grupal de grado para el tecnólogo. Sistema de gestión de gimnasios para control de socios, reservas de clases, instructores y cobros. Lógica de email SMTP integrada (`mailConfirmCli.php`, `mailConfirmInst.php`) y scripts SQL de importación.</p>
-                                    <p class="project-arch-text" style="font-size: 0.82rem; color: var(--clr-txt-muted); margin-bottom: 1rem;">
-                                        <em>Pruebas:</em> Recepcionista: `1032480756` / Clave: `1345ElmejorGrupo`
+                                    <p data-i18n="proj5-desc"><strong>Problem & Solution:</strong> Group graduation project for the technologist degree. Gym management system for member tracking, class reservations, instructors, and billing. Features integrated SMTP email logic (mailConfirmCli.php, mailConfirmInst.php) and SQL database import scripts.</p>
+                                    <p class="project-arch-text" style="font-size: 0.82rem; color: var(--clr-txt-muted); margin-bottom: 1rem;" data-i18n="proj5-impact">
+                                        <em>Testing:</em> Receptionist: 1032480756 / Password: 1345ElmejorGrupo
                                     </p>
                                     <div class="project-tags">
                                         <span>PHP</span>
@@ -391,20 +397,20 @@
                             <article class="project-card">
                                 <div class="project-img-container">
                                     <div class="project-overlay">
-                                        <a href="https://github.com/PaulaDC2725/OpticaCLINIVER" target="_blank" aria-label="Ver Código en GitHub" class="project-link-btn" style="width: 3.5rem; height: 3.5rem;">
+                                        <a href="https://github.com/PaulaDC2725" target="_blank" aria-label="Ver Código en GitHub" class="project-link-btn" style="width: 3.5rem; height: 3.5rem;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                                         </a>
                                     </div>
                                     <div class="project-placeholder flex-center">
                                         <div class="project-placeholder-text">Cliniver</div>
-                                        <span class="project-category-tag">Proyecto de Grado @ SENA (Técnico - Individual)</span>
+                                        <span class="project-category-tag" data-i18n="proj6-tag">Graduation Project @ SENA (Technical - Individual)</span>
                                     </div>
                                 </div>
                                 <div class="project-info">
                                     <h3>Cliniver</h3>
-                                    <p><strong>Problema y Solución:</strong> Proyecto de grado del técnico realizado 100% de manera individual. Soluciona la gestión de historias clínicas y fórmulas ópticas para Óptica Cliniver, centralizando el expediente de pacientes, citas y monturas.</p>
-                                    <p class="project-arch-text" style="font-size: 0.82rem; color: var(--clr-txt-muted); margin-bottom: 1rem;">
-                                        <em>Impacto Técnico:</em> Arquitectura desacoplada, backend funcional y base de datos relacional para el control óptico clínico.
+                                    <p data-i18n="proj6-desc"><strong>Problem & Solution:</strong> Technical graduation project completed 100% individually. Solves the management of clinical records and optical prescriptions for Óptica Cliniver, centralizing patient files, appointments, and frames inventory.</p>
+                                    <p class="project-arch-text" style="font-size: 0.82rem; color: var(--clr-txt-muted); margin-bottom: 1rem;" data-i18n="proj6-impact">
+                                        <em>Technical Impact:</em> Decoupled architecture, functional backend, and relational database for clinical optical tracking.
                                     </p>
                                     <div class="project-tags">
                                         <span>.NET 8 (C#)</span>
@@ -431,8 +437,8 @@
         <section id="habilidades" class="skills-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-subtitle">Mis competencias</span>
-                    <h2 class="section-title">Habilidades Técnicas</h2>
+                    <span class="section-subtitle" data-i18n="skills-subtitle">My competencies</span>
+                    <h2 class="section-title" data-i18n="skills-title">Technical Skills</h2>
                     <div class="divider"></div>
                 </div>
 
@@ -444,11 +450,11 @@
                             <h3>Frontend & UI Performance</h3>
                         </div>
                         <ul class="skills-list">
-                            <li><span>React.js v18+ / Next.js</span> <span class="skill-lvl">Avanzado</span></li>
-                            <li><span>Angular</span> <span class="skill-lvl">Avanzado</span></li>
-                            <li><span>TypeScript / JavaScript</span> <span class="skill-lvl">Avanzado</span></li>
-                            <li><span>Vite / pnpm</span> <span class="skill-lvl">Experto</span></li>
-                            <li><span>Tailwind CSS / BEM CSS</span> <span class="skill-lvl">Experto</span></li>
+                            <li><span>React.js v18+ / Next.js</span> <span class="skill-lvl" data-i18n="lvl-adv">Advanced</span></li>
+                            <li><span>Angular</span> <span class="skill-lvl" data-i18n="lvl-adv">Advanced</span></li>
+                            <li><span>TypeScript / JavaScript</span> <span class="skill-lvl" data-i18n="lvl-adv">Advanced</span></li>
+                            <li><span>Vite / pnpm</span> <span class="skill-lvl" data-i18n="lvl-exp">Expert</span></li>
+                            <li><span>Tailwind CSS / BEM CSS</span> <span class="skill-lvl" data-i18n="lvl-exp">Expert</span></li>
                         </ul>
                     </div>
 
@@ -456,14 +462,14 @@
                     <div class="skills-card">
                         <div class="skills-card-header">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-                            <h3>Backend & Arquitectura</h3>
+                            <h3>Backend & Architecture</h3>
                         </div>
                         <ul class="skills-list">
-                            <li><span>C# .NET 8 / Node.js</span> <span class="skill-lvl">Avanzado</span></li>
-                            <li><span>Hexagonal & DDD Architectures</span> <span class="skill-lvl">Avanzado</span></li>
-                            <li><span>Principios SOLID / Clean Code</span> <span class="skill-lvl">Avanzado</span></li>
-                            <li><span>Python / PHP</span> <span class="skill-lvl">Intermedio</span></li>
-                            <li><span>PostgreSQL / SQL Server / MongoDB</span> <span class="skill-lvl">Avanzado</span></li>
+                            <li><span>C# .NET 8 / Node.js</span> <span class="skill-lvl" data-i18n="lvl-adv">Advanced</span></li>
+                            <li><span>Hexagonal & DDD Architectures</span> <span class="skill-lvl" data-i18n="lvl-adv">Advanced</span></li>
+                            <li><span>Principios SOLID / Clean Code</span> <span class="skill-lvl" data-i18n="lvl-adv">Advanced</span></li>
+                            <li><span>Python / PHP</span> <span class="skill-lvl" data-i18n="lvl-int">Intermediate</span></li>
+                            <li><span>PostgreSQL / SQL Server / MongoDB</span> <span class="skill-lvl" data-i18n="lvl-adv">Advanced</span></li>
                         </ul>
                     </div>
 
@@ -471,14 +477,14 @@
                     <div class="skills-card">
                         <div class="skills-card-header">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
-                            <h3>DevOps & Calidad (QA)</h3>
+                            <h3 data-i18n="skills-card3-title">DevOps & QA</h3>
                         </div>
                         <ul class="skills-list">
-                            <li><span>Git & GitHub Actions (CI/CD)</span> <span class="skill-lvl">Avanzado</span></li>
-                            <li><span>Testing Unitario (xUnit / Jest)</span> <span class="skill-lvl">Intermedio</span></li>
-                            <li><span>Oracle Cloud (OCI) / Docker</span> <span class="skill-lvl">Avanzado</span></li>
-                            <li><span>APIs REST & Integraciones</span> <span class="skill-lvl">Avanzado</span></li>
-                            <li><span>Metodologías Ágiles & Git Flow</span> <span class="skill-lvl">Avanzado</span></li>
+                            <li><span>Git & GitHub Actions (CI/CD)</span> <span class="skill-lvl" data-i18n="lvl-adv">Advanced</span></li>
+                            <li><span>Testing Unitario (xUnit / Jest)</span> <span class="skill-lvl" data-i18n="lvl-int">Intermediate</span></li>
+                            <li><span>Oracle Cloud (OCI) / Docker</span> <span class="skill-lvl" data-i18n="lvl-adv">Advanced</span></li>
+                            <li><span>APIs REST & Integraciones</span> <span class="skill-lvl" data-i18n="lvl-adv">Advanced</span></li>
+                            <li><span>Metodologías Ágiles & Git Flow</span> <span class="skill-lvl" data-i18n="lvl-adv">Advanced</span></li>
                         </ul>
                     </div>
                 </div>
@@ -489,15 +495,15 @@
         <section id="contacto" class="contact-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-subtitle">¿Hablamos?</span>
-                    <h2 class="section-title">Contacto</h2>
+                    <span class="section-subtitle" data-i18n="contact-subtitle">Let's Talk</span>
+                    <h2 class="section-title" data-i18n="contact-title">Contact</h2>
                     <div class="divider"></div>
                 </div>
 
                 <div class="contact-grid">
                     <div class="contact-info">
-                        <h3>Pongámonos en contacto</h3>
-                        <p>¿Buscas una ingeniera de software capaz de garantizar que tu frontend soporte cargas masivas en tiempo real o que tu backend esté diseñado con un desacople arquitectónico estricto? Estoy lista para sumarme de inmediato a tu equipo en modalidades Remoto Global, Híbrido en Bogotá o Presencial. Construyamos código limpio, robusto y altamente escalable.</p>
+                        <h3 data-i18n="contact-heading">Get in Touch</h3>
+                        <p data-i18n="contact-desc">Are you looking for a software engineer capable of ensuring your frontend supports massive real-time loads or that your backend is designed with strict architectural decoupling? I am ready to join your team immediately in Global Remote, Hybrid in Bogotá, or On-site modalities. Let's build clean, robust, and highly scalable code.</p>
                         
                         <div class="contact-methods">
                             <a href="mailto:pcdelgadoa2002@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-item">
@@ -516,7 +522,7 @@
                                 <div class="contact-icon-box">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                                 </div>
-                                <span>Bogotá, Colombia (Remoto / Híbrido / Presencial)</span>
+                                <span data-i18n="contact-loc">Bogotá, Colombia (Remote / Hybrid / On-site)</span>
                             </div>
                         </div>
 
@@ -532,18 +538,18 @@
 
                     <form class="contact-form" id="contact-form" action="https://formspree.io/f/mojgvyoz" method="POST">
                         <div class="form-group">
-                            <label for="name">Nombre</label>
-                            <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                            <label for="name" data-i18n="form-name-label">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
                         </div>
                         <div class="form-group">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" required placeholder="tu.email@ejemplo.com">
+                            <label for="email" data-i18n="form-email-label">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
                         </div>
                         <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="¿En qué puedo ayudarte?"></textarea>
+                            <label for="message" data-i18n="form-msg-label">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="How can I help you?"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-submit">Enviar Mensaje</button>
+                        <button type="submit" class="btn btn-primary btn-submit" data-i18n="form-submit">Send Message</button>
                         <div class="form-status" id="form-status"></div>
                     </form>
                 </div>
@@ -554,11 +560,12 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-content">
-            <p>&copy; 2026 Paula Catalina Delgado Almendrales. Todos los derechos reservados.</p>
-            <p>Diseñado y desarrollado con HSL CSS y Javascript nativo.</p>
+            <p data-i18n="footer-rights">&copy; 2026 Paula Catalina Delgado Almendrales. All rights reserved.</p>
+            <p data-i18n="footer-dev">Designed and developed with HSL CSS and native Javascript.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

@@ -106,19 +106,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Simple validation
             if (!nameInput.value.trim() || !emailInput.value.trim() || !messageInput.value.trim()) {
-                showStatus('Por favor, completa todos los campos obligatorios.', 'error');
-                return;
-            }
-
-            // Verify if action endpoint is configured
-            if (contactForm.action.includes('TU_ID_DE_FORMSPREE')) {
-                showStatus('Error: Debes configurar tu ID de Formspree en index.html.', 'error');
+                showStatus('Please complete all required fields.', 'error');
                 return;
             }
 
             // Start Loading state
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Enviando...';
+            submitBtn.textContent = 'Sending...';
             submitBtn.style.opacity = '0.7';
             showStatus('', '');
 
@@ -132,20 +126,20 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(response => {
                 if (response.ok) {
-                    showStatus('¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.', 'success');
+                    showStatus('Message sent successfully! I will get back to you soon.', 'success');
                     contactForm.reset();
                 } else {
                     response.json().then(data => {
                         if (data && Object.prototype.hasOwnProperty.call(data, 'errors')) {
                             showStatus(data.errors.map(error => error.message).join(", "), 'error');
                         } else {
-                            showStatus('Hubo un problema al enviar el formulario. Intenta de nuevo.', 'error');
+                            showStatus('There was a problem sending your message. Please try again.', 'error');
                         }
                     });
                 }
             })
             .catch(error => {
-                showStatus('Error de conexión. Por favor, verifica tu conexión a internet.', 'error');
+                showStatus('Connection error. Please check your internet connection.', 'error');
             })
             .finally(() => {
                 // Restore button state
@@ -189,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const dot = document.createElement('button');
                 dot.classList.add('carousel-dot');
                 if (i === currentIndex) dot.classList.add('active');
-                dot.setAttribute('aria-label', `Ir al proyecto ${i + 1}`);
+                dot.setAttribute('aria-label', `Go to project ${i + 1}`);
                 dot.addEventListener('click', () => {
                     goToSlide(i);
                 });
@@ -322,4 +316,52 @@ document.addEventListener('DOMContentLoaded', () => {
             formStatus.classList.add('error');
         }
     }
+
+    // --- Google Translate Language Change Banner Listener ---
+    const initTranslateListener = () => {
+        const updateBannerText = (langCode) => {
+            const bannerText = document.getElementById('lang-banner-text');
+            if (!bannerText) return;
+            
+            // Extract the core language identifier (e.g., 'es-ES' -> 'es')
+            const lang = langCode.split('-')[0].toLowerCase();
+            
+            if (lang === 'en') {
+                bannerText.textContent = '¿No entiendes inglés? Traduce la página a tu idioma de preferencia:';
+            } else if (lang === 'es') {
+                bannerText.textContent = '¿No entiendes español? Traduce la página a tu idioma de preferencia:';
+            } else {
+                // Fallback for other languages: prompt in English asking if they don't understand the active language
+                const targetLanguageName = lang.toUpperCase();
+                bannerText.textContent = `Don't understand this language? Translate the page to your language of choice:`;
+            }
+        };
+
+        // Poll for Google Translate dynamic select element creation
+        const checkSelectInterval = setInterval(() => {
+            const selectEl = document.querySelector('.goog-te-combo');
+            if (selectEl) {
+                clearInterval(checkSelectInterval);
+                
+                // Read and set initial text
+                updateBannerText(selectEl.value || 'en');
+                
+                // Bind selection changes
+                selectEl.addEventListener('change', (e) => {
+                    updateBannerText(e.target.value || 'en');
+                });
+            }
+        }, 300);
+    };
+
+    initTranslateListener();
 });
+
+// --- Google Translate Initialization Callback (Global Scope) ---
+window.googleTranslateElementInit = function() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+    }, 'google_translate_element');
+};
