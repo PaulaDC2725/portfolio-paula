@@ -319,40 +319,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Google Translate Language Change Banner Listener ---
     const initTranslateListener = () => {
-        const updateBannerText = (langCode) => {
-            const bannerText = document.getElementById('lang-banner-text');
-            if (!bannerText) return;
-            
-            // Extract the core language identifier (e.g., 'es-ES' -> 'es')
-            const lang = langCode.split('-')[0].toLowerCase();
-            
-            if (lang === 'en') {
-                bannerText.textContent = '¿No entiendes inglés? Traduce la página a tu idioma de preferencia:';
-            } else if (lang === 'es') {
-                bannerText.textContent = '¿No entiendes español? Traduce la página a tu idioma de preferencia:';
-            } else {
-                // Fallback for other languages: prompt in English asking if they don't understand the active language
-                const targetLanguageName = lang.toUpperCase();
-                bannerText.textContent = `Don't understand this language? Translate the page to your language of choice:`;
-            }
-        };
-
-        // Poll for Google Translate dynamic select element creation
-        const checkSelectInterval = setInterval(() => {
-            const selectEl = document.querySelector('.goog-te-combo');
-            if (selectEl) {
-                clearInterval(checkSelectInterval);
-                
-                // Read and set initial text
-                updateBannerText(selectEl.value || 'en');
-                
-                // Bind selection changes
-                selectEl.addEventListener('change', (e) => {
-                    updateBannerText(e.target.value || 'en');
-                });
-            }
-        }, 300);
-
         // Close banner and show floating trigger button event listener
         const closeBtn = document.getElementById('lang-banner-close');
         const bannerEl = document.getElementById('lang-banner');
