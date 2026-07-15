@@ -353,12 +353,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 300);
 
-        // Close banner event listener
+        // Close banner and show floating trigger button event listener
         const closeBtn = document.getElementById('lang-banner-close');
         const bannerEl = document.getElementById('lang-banner');
-        if (closeBtn && bannerEl) {
+        const triggerBtn = document.getElementById('lang-banner-trigger');
+        
+        if (closeBtn && bannerEl && triggerBtn) {
             closeBtn.addEventListener('click', () => {
                 bannerEl.style.display = 'none';
+                triggerBtn.style.display = 'flex';
+            });
+            
+            triggerBtn.addEventListener('click', () => {
+                bannerEl.style.display = 'flex';
+                triggerBtn.style.display = 'none';
             });
         }
     };
