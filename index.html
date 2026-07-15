@@ -34,8 +34,14 @@
     <header class="header">
         <!-- Language Switcher Banner -->
         <div class="lang-banner notranslate" id="lang-banner">
-            <span id="lang-banner-text">Don't understand English? Translate the page to your language of choice:</span>
-            <div id="google_translate_element"></div>
+            <div class="lang-banner-content">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lang-icon" style="color: var(--clr-secondary);"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                <span id="lang-banner-text">Don't understand English? Translate the page to your language of choice:</span>
+            </div>
+            <div class="lang-banner-actions">
+                <div id="google_translate_element"></div>
+                <button class="lang-banner-close" id="lang-banner-close" aria-label="Close translation banner">&times;</button>
+            </div>
         </div>
         
         <div class="container navbar">

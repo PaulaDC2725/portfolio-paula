@@ -1213,28 +1213,69 @@ h1, h2, h3, h4 {
 
 /* --- Language Switcher Banner --- */
 .lang-banner {
-    background: rgba(15, 23, 42, 0.85);
+    background: rgba(10, 15, 30, 0.7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 0.6rem 1rem;
+    border-top: 1px solid rgba(139, 92, 246, 0.2); /* Subtle gradient boundary */
+    padding: 0.5rem 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 1.2rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.lang-banner-content {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
     font-size: 0.82rem;
     color: var(--clr-txt-muted);
     font-family: var(--font-code);
-    text-align: center;
-    transition: all 0.3s ease;
-    width: 100%;
+}
+
+.lang-banner-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.lang-banner-close {
+    background: transparent;
+    border: none;
+    color: var(--clr-txt-muted);
+    font-size: 1.3rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 0.25rem;
+    transition: var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-banner-close:hover {
+    color: var(--clr-txt);
+    transform: scale(1.15);
 }
 
 @media (max-width: 768px) {
     .lang-banner {
         flex-direction: column;
+        padding: 0.6rem 1rem;
+        gap: 0.6rem;
+    }
+    .lang-banner-content {
+        font-size: 0.76rem;
+        text-align: center;
+        justify-content: center;
         gap: 0.5rem;
-        padding: 0.75rem 1rem;
+    }
+    .lang-banner-actions {
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
     }
 }
 

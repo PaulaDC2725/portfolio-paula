@@ -352,6 +352,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         }, 300);
+
+        // Close banner event listener
+        const closeBtn = document.getElementById('lang-banner-close');
+        const bannerEl = document.getElementById('lang-banner');
+        if (closeBtn && bannerEl) {
+            closeBtn.addEventListener('click', () => {
+                bannerEl.style.display = 'none';
+            });
+        }
     };
 
     initTranslateListener();
